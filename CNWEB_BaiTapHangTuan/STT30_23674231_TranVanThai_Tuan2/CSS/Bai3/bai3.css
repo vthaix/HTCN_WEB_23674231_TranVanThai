@@ -1,0 +1,101 @@
+.default_background {
+    background-image: url(../../img/Bai3/background.jpg);
+    background-repeat: repeat;
+
+    border: 1px solid black;
+}
+
+.default_logo {
+    margin: 10px;
+}
+
+.index {
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: 3fr 3fr 1fr;
+
+    align-items: center;
+    justify-content: center;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: 2fr 10fr 1fr;
+}
+
+.subcontainer {
+    display: grid;
+    grid-template-columns: 2fr 7fr;
+    grid-template-rows: auto;
+}
+
+.subcontainer_border {
+    border-left: 1px solid green;
+}
+
+.link_box {
+    border-style: outset;
+    background-color: white;
+
+    margin: 10px;
+}
+
+.link_list {
+    list-style: none;
+}
+
+.link_list li {
+    margin-bottom: 10px;
+    margin-left: -30px;
+}
+
+.bigtitle {
+    background-color: green;
+
+    font-style: italic;
+    color: white;
+
+    margin-top: 0px;
+    margin-bottom: 20px;
+    margin-left: 30px;
+    margin-right: 200px;
+    
+    padding-left: 100px;
+    letter-spacing: 20px;
+}
+
+.title {
+    background-color: green;
+    color: white;
+
+    margin-top: 0px;
+    margin-bottom: 20px;
+    margin-left: 30px;
+    margin-right: 520px;
+    
+    padding-left: 20px;
+}
+
+.float_right {
+    float: right;
+    margin-left: 20px;
+}
+
+p{
+    margin-left: 30px;
+    color: white;
+}
+
+.default_ul li {
+    color: white;
+}
+
+.footer {
+    border-top: 5px double green;
+    color: white;
+
+    align-items: center;
+    justify-content: center;
+    display: flex;
+}

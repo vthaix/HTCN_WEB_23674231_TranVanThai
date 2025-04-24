@@ -1,0 +1,128 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+@font-face {
+    font-family: 'MyFont';
+    src: url('../../IMG/Bai2/fonts/fontawesome-webfont.woff2') format('woff2'),
+         url('../../IMG/Bai2/fonts/fontawesome-webfont.woff') format('woff'),
+         url('../../IMG/Bai2/fonts/fontawesome-webfont.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.container_main{
+    height: 100vh;
+}
+
+.bg-gradient-custom {
+    background: linear-gradient(50deg, #0D0E10, #384244);
+}
+
+.box {
+    position: relative;
+    margin-top: 25px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    color: #ffffff;
+    border-radius: 15px;
+    overflow: hidden;
+    background: linear-gradient(to bottom, #f1f2f3 25px, #222831 25px);
+}
+
+.box .img-box {
+    background: #f1f2f3;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    height: 215px;
+    border-radius: 0 0 0 45px;
+    margin: -1px;
+    padding: 25px;
+  }
+
+.navbar-nav {
+    margin-left: 1000px;
+}
+
+
+h1,p {
+    font-family: 'MyFont', sans-serif;
+}
+
+.hover:hover {
+    color: var(--bs-warning);
+}
+
+.dot {
+    display: inline-block;
+    width: 11px;
+    height: 11px;
+    border-radius: 100%;
+    background-color: aliceblue;
+}
+
+.dot:hover {
+    width: 16px;
+    height: 16px;
+    background-color: var(--bs-warning);
+}
+
+.nav-pills .nav-link:focus, 
+.nav-pills .nav-link:active {
+    outline: none !important;
+    box-shadow: none !important;
+}
+
+.nav-pills .nav-link.active {
+    background-color: #222831;
+    color: #fff !important;
+    border-radius: 50px;
+
+}
+
+
+.footer_section {
+    background-color: #222831;
+    color: #ffffff;
+    padding: 75px 0 40px 0;
+    text-align: center;
+}
+
+.footer_section .footer_contact .contact_link_box {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+}
+
+.footer_section .footer_contact .contact_link_box a {
+    margin: 5px 0;
+    color: #ffffff;
+    text-decoration: none;
+}
+
+.footer_section .footer-logo {
+    display: block;
+    font-weight: bold;
+    font-size: 38px;
+    line-height: 1;
+    color: #ffffff;
+    text-decoration: none;
+    padding-bottom: 10px;
+}
+
+.bg-about-custom {
+    background-color: #222831;
+}
+
+
+.map_container img {
+    width: 90%;
+}

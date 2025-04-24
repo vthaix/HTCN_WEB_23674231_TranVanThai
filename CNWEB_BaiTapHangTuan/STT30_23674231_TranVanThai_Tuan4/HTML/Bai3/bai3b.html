@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="Nguyen Huu Nhan" content="23668001">
+    <title>Modal</title>
+    <link rel="stylesheet" href="/bai3/styles.css">
+    <link rel="stylesheet" href="../../CSS/bootstrap-5.3.3-dist/css/bootstrap.min.css">
+    <script src="../../CSS/bootstrap-5.3.3-dist/js/bootstrap.bundle.js"></script>
+</head>
+
+<body>
+    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#loginRegisterModal">
+        Mở Modal
+    </button>
+    <div class="modal fade" id="loginRegisterModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <ul class="nav nav-tabs" id="myTab" role="tablist">
+                        <li class="nav-item">
+                            <a class="nav-link active text-secondary text-uppercase fw-bold" id="login-tab" data-bs-toggle="tab" href="#login"
+                                role="tab">Đăng Nhập</a>
+                        </li>
+                        <li class="nav-item">
+                            <span class="text-secondary mx-2" style="font-size: 1rem; line-height: 2.5rem;">/</span>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-secondary text-uppercase fw-bold" id="register-tab" data-bs-toggle="tab" href="#register"
+                                role="tab">Đăng Ký</a>
+                        </li>
+                    </ul>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="tab-content" id="myTabContent">
+                        <div class="tab-pane fade show active" id="login" role="tabpanel">
+                            <p class="text-secondary">Vui lòng đăng nhập trước khi mua vé để tích luỹ điểm, cơ hội nhận
+                                thêm
+                                nhiều ưu đãi từ chương trình thành viên Galaxy Cinema.</p>
+                            <form>
+                                <div class="mb-3">
+                                    <input type="email" class="form-control" placeholder="Email">
+                                </div>
+                                <div class="mb-3">
+                                    <input type="password" class="form-control" placeholder="Mật khẩu">
+                                </div>
+                                <a href="#" class="text-decoration-none text-secondary">Quên mật khẩu?</a>
+                                <button type="submit" class="btn form-control text-white text-uppercase mt-3">Đăng Nhập</button>
+                            </form>
+                        </div>
+                        <div class="tab-pane fade" id="register" role="tabpanel">
+                            <form>
+                                <div class="row mb-3">
+                                    <div class="col"><input type="text" class="form-control" placeholder="Họ tên"></div>
+                                </div>
+                                <div class="row mb-3">
+                                    <div class="col"><input type="tel" class="form-control" placeholder="Số điện thoại">
+                                    </div>
+                                    <div class="col">
+                                        <select name="gioiTinh" id="gioiTinh" class="form-control">
+                                            <option value="" disabled selected>Chọn giới tính</option>
+                                            <option value="nam">Nam</option>
+                                            <option value="nu">Nữ</option>
+                                            <option value="khac">Khác</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="row mb-3">
+                                    <div class="col"><input type="email" class="form-control" placeholder="Email"></div>
+                                </div>
+                                <div class="row mb-3">
+                                    <div class="col"><input type="password" class="form-control" placeholder="Mật khẩu">
+                                    </div>
+                                    <div class="col"><input type="password" class="form-control"
+                                            placeholder="Xác nhận mật khẩu"></div>
+                                </div>
+                                <div class="row mb-3">
+                                    <div class="col">
+                                        <select name="city" id="city" class="form-control">
+                                            <option value="" disabled selected>Chọn thành phố</option>
+                                            <option value="nam">Hồ Chí Minh</option>
+                                            <option value="nu">Cao Lãnh</option>
+                                            <option value="khac">Khác</option>
+                                        </select>
+                                    </div>
+                                    <div class="col">
+                                        <select name="quan" id="quạn" class="form-control">
+                                            <option value="" disabled selected>Quận</option>
+                                            <option value="nam">Phú Nhuận</option>
+                                            <option value="nu">Q12</option>
+                                            <option value="khac">Khác</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="row mb-3">
+                                    <div class="col"><input type="text" class="form-control" placeholder="Địa chỉ">
+                                    </div>
+                                </div>
+                                <div class="row mb-3">
+                                    <div class="col"><input type="date" name="ngay" id="ngay" class="form-control"
+                                            placeholder="Chọn ngày"></div>
+                                </div>
+                                <div class="row mb-3">
+                                    <div class="col"><input type="text" class="form-control" placeholder="Nhập mã capcha"></div>
+                                </div>
+                                <p class="text-secondary">Tôi đã đọc và đồng ý với <span class="text-uppercase fw-bold" style="color: #F46C3C;">chính sách</span> của chương trình</p>
+                                <button type="submit" class="btn form-control text-white text-uppercase">Đăng Ký</button>
+                            </form>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>

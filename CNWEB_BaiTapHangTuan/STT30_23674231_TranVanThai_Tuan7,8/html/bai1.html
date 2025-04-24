@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="23668001" content="Nguyen Huu Nhan">
+    <title>Gallery</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <style>
+        .gallery figure {
+            text-align: center;
+        }
+        .gallery img {
+            width: 100%;
+            height: 200px; /* Cố định chiều cao */
+            object-fit: cover; /* Cắt ảnh để vừa khung */
+            cursor: pointer;
+            transition: transform 0.3s ease-in-out;
+        }
+        .gallery img:hover {
+            transform: scale(1.05);
+        }
+        figcaption {
+            font-size: 14px;
+            margin-top: 5px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="container mt-5">
+        <h2 class="text-center mb-4">Image Gallery</h2>
+        <div class="row gallery">
+            <div class="col-md-4 col-sm-6 mb-3">
+                <figure>
+                    <img src="../Images/cat.jpg" class="img-thumbnail" data-bs-toggle="modal" data-bs-target="#imageModal">
+                    <figcaption>Cat</figcaption>
+                </figure>
+            </div>
+            <div class="col-md-4 col-sm-6 mb-3">
+                <figure>
+                    <img src="../Images/lion.jpg" class="img-thumbnail" data-bs-toggle="modal" data-bs-target="#imageModal">
+                    <figcaption>Lion</figcaption>
+                </figure>
+            </div>
+            <div class="col-md-4 col-sm-6 mb-3">
+                <figure>
+                    <img src="../Images/panda.jpg" class="img-thumbnail" data-bs-toggle="modal" data-bs-target="#imageModal">
+                    <figcaption>Panda</figcaption>
+                </figure>
+            </div>
+            <div class="col-md-4 col-sm-6 mb-3">
+                <figure>
+                    <img src="../Images/Rhino.jpg" class="img-thumbnail" data-bs-toggle="modal" data-bs-target="#imageModal">
+                    <figcaption>Rhino</figcaption>
+                </figure>
+            </div>
+            <div class="col-md-4 col-sm-6 mb-3">
+                <figure>
+                    <img src="../Images/sheep.jpg" class="img-thumbnail" data-bs-toggle="modal" data-bs-target="#imageModal">
+                    <figcaption>Sheep</figcaption>
+                </figure>
+            </div>
+            <div class="col-md-4 col-sm-6 mb-3">
+                <figure>
+                    <img src="../Images/panda.jpg" class="img-thumbnail" data-bs-toggle="modal" data-bs-target="#imageModal">
+                    <figcaption>Panda</figcaption>
+                </figure>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal -->
+    <div class="modal fade" id="imageModal" tabindex="-1" aria-labelledby="imageModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Image Preview</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body text-center">
+                    <img id="modalImage" src="" class="img-fluid">
+                    <p id="modalCaption" class="mt-2"></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        $(document).ready(function() {
+            $('.gallery img').click(function() {
+                let imgSrc = $(this).attr('src');  
+                let caption = $(this).siblings("figcaption").text(); 
+                $('#modalImage').attr('src', imgSrc);
+                $('#modalCaption').text(caption);
+            });
+        });
+    </script>
+</body>
+</html>
