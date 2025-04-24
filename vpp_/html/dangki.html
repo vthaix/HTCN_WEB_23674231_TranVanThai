@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Đăng Ký</title>
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <script src="../js/jquery.js"></script>
+    <script src="../js/bootstrap.bundle.min.js"></script>
+    <style>
+        .toast-container {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            z-index: 1055;
+        }
+        
+        .toast {
+            background-color: #28a745;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 8px;
+        }
+    </style>
+</head>
+
+<body class="container col-6">
+    <div class="row">
+        <header class="bg-light w-100">
+            <div class="container d-flex justify-content-between align-items-center">
+
+                <div class="col-auto">
+                    <img src="../img/logo.jpeg" alt="Logo" style="height: 100px; width: 200px;">
+                </div>
+
+                <div class="col-auto">
+                    <h3 class="m-0" style="font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; font-weight: bold; border-bottom: 3px solid black; padding-bottom: 10px;">
+                        THANHXUAN
+                    </h3>
+                </div>
+            </div>
+        </header>
+    </div>
+
+    <div class="row">
+        <div class="d-flex justify-content-center align-items-center" style="height: 100vh; background-color: rgb(249, 91, 91);">
+            <div class="card shadow p-4 bg-white" style="width: 100%; max-width: 400px; border-radius: 15px;">
+                <h3 class="text-center mb-4">Đăng Ký</h3>
+                <form id="registerForm">
+                    <div class="mb-3">
+                        <label for="fullname" class="form-label">Họ tên:</label>
+                        <input type="text" class="form-control" id="fullname" placeholder="Họ và tên" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="email" class="form-label">Email:</label>
+                        <input type="email" class="form-control" id="email" placeholder="Email" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="phone" class="form-label">Số điện thoại:</label>
+                        <input type="tel" class="form-control" id="phone" placeholder="Số điện thoại" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="password" class="form-label">Mật khẩu:</label>
+                        <input type="password" class="form-control" id="password" placeholder="Mật khẩu" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="confirmPassword" class="form-label">Nhập lại mật khẩu:</label>
+                        <input type="password" class="form-control" id="confirmPassword" placeholder="Nhập lại mật khẩu" required>
+                    </div>
+                    <div id="errorMessage" class="text-danger mb-3" style="display: none;"></div>
+                    <button type="submit" class="btn btn-primary w-100" style="background-color: rgb(254, 54, 54); color: rgb(255, 255, 255); border: 1px solid black;">
+                        Đăng ký</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById("registerForm").addEventListener("submit", function(event) {
+            event.preventDefault();
+            const fullname = document.getElementById("fullname").value.trim();
+            const email = document.getElementById("email").value.trim();
+            const phone = document.getElementById("phone").value.trim();
+            const password = document.getElementById("password").value.trim();
+            const confirmPassword = document.getElementById("confirmPassword").value.trim();
+            const errorMessage = document.getElementById("errorMessage");
+            const toast = document.getElementById("successToast");
+
+            const emailPattern = /^[a-zA-Z]+[0-9]+@gmail\.com$/;
+            const phonePattern = /^0\d{9}$/;
+
+            if (!emailPattern.test(email)) {
+                errorMessage.textContent = "Email sai định dạng";
+                errorMessage.style.display = "block";
+            } else if (!phonePattern.test(phone)) {
+                errorMessage.textContent = "Số điện thoại phải có 10 chữ số và bắt đầu bằng 0";
+                errorMessage.style.display = "block";
+            } else if (password !== confirmPassword) {
+                errorMessage.textContent = "Mật khẩu và nhập lại mật khẩu không khớp";
+                errorMessage.style.display = "block";
+            } else {
+                errorMessage.style.display = "none";
+                alert("Đăng kí tài khoản thành công");
+
+                setTimeout(() => {
+
+                    window.location.href = 'login.html';
+                }, 2500);
+            }
+        });
+    </script>
+</body>
+
+</html>

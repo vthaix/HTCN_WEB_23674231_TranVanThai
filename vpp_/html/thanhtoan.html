@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Thanh Toán | Văn Phòng Phẩm</title>
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/bootstrap-icons.css">
+    <script src="../js/jquery.js"></script>
+    <script src="../js/bootstrap.bundle.min.js"></script>
+    <style>
+        .form-section {
+            background-color: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px #ccc;
+            margin-top: 30px;
+        }
+        
+        .form-title {
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 20px;
+            border-bottom: 2px solid #dc3545;
+            display: inline-block;
+            padding-bottom: 5px;
+        }
+        
+        .btn-danger {
+            width: 100%;
+            padding: 12px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body class="bg-light">
+
+    <!-- Header -->
+    <header class="bg-white shadow-sm p-3">
+        <div class="container d-flex justify-content-between align-items-center">
+            <div class="d-flex align-items-center">
+                <img src="../img/logo.jpeg" alt="Logo" style="height: 100px; width: 200px;" class="me-3">
+                <h3 class="m-0" style="font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; font-weight: bold; border-bottom: 3px solid black; padding-bottom: 10px;">
+                    THANHXUAN</h3>
+            </div>
+            <div class="d-flex">
+                <input type="text" class="form-control me-2" style="height: 40px;" placeholder="Tìm kiếm sản phẩm...">
+                <button class="btn" style="border: 1px solid black ;height: 40px;">
+                    <a href="storeAddress.html">
+                        <i class="bi bi-geo-alt" style="color: red"></i>
+                    </a>
+                </button>
+                <button class="btn" style="border: 1px solid black; height: 40px; margin-left: 10px;">
+                    <a href="giohang.html">
+                        <i class="bi bi-cart giohang" style="color: red;"></i>
+                    </a>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-danger">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">Trang chủ</a>
+            <button class="navbar-toggler" type="button">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarContent">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="sach.html">Sách - Văn Học</a></li>
+                    <li class="nav-item"><a class="nav-link" href="hoacu.html">Hoạ Cụ - Màu Vẽ</a></li>
+                    <li class="nav-item"><a class="nav-link" href="qualuuniem.html">Bách Hoá - Lưu Niệm</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Thanh Toán Form -->
+    <div class="container">
+        <div class="form-section">
+            <div class="form-title text-danger">Thông Tin Người Mua</div>
+            <form>
+                <div class="row mb-3">
+                    <div class="col-md-6">
+                        <label for="hoTen" class="form-label">Họ và Tên</label>
+                        <input type="text" class="form-control" id="hoTen" placeholder="Nguyễn Văn A" required>
+                    </div>
+                    <div class="col-md-6">
+                        <label for="sdt" class="form-label">Số điện thoại</label>
+                        <input type="tel" class="form-control" id="sdt" placeholder="0901234567" required>
+                    </div>
+                </div>
+
+                <div class="mb-3">
+                    <label for="diaChi" class="form-label">Địa chỉ</label>
+                    <input type="text" class="form-control" id="diaChi" placeholder="123 Lê Văn Việt, Thủ Đức" required>
+                </div>
+
+                <div class="form-title text-danger mt-4">Thông Tin Ngân Hàng</div>
+                <div class="row mb-3">
+                    <div class="col-md-6">
+                        <label for="tenNH" class="form-label">Tên Ngân Hàng</label>
+                        <input type="text" class="form-control" id="tenNH" placeholder="Vietcombank, Agribank..." required>
+                    </div>
+                    <div class="col-md-6">
+                        <label for="soTK" class="form-label">Số Tài Khoản</label>
+                        <input type="text" class="form-control" id="soTK" placeholder="1234567890" required>
+                    </div>
+                </div>
+
+                <button type="submit" class="btn btn-danger mt-3">Xác Nhận Thanh Toán</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white text-center py-4 mt-5">
+        <p class="mb-0">Địa chỉ: 123 Lê Văn Việt, Thủ Đức, TP.HCM</p>
+        <p class="mb-0">© 2025 Văn Phòng Phẩm ABC</p>
+    </footer>
+
+    <script>
+        document.querySelector("form").addEventListener("submit", function(e) {
+            e.preventDefault();
+
+            const hoTen = document.getElementById("hoTen").value.trim();
+            const sdt = document.getElementById("sdt").value.trim();
+            const diaChi = document.getElementById("diaChi").value.trim();
+            const tenNH = document.getElementById("tenNH").value.trim();
+            const soTK = document.getElementById("soTK").value.trim();
+
+            if (hoTen && sdt && diaChi && tenNH && soTK) {
+                alert("Thanh toán thành công! Cảm ơn bạn đã mua hàng.");
+                setTimeout(() => {
+                    window.location.href = "index.html";
+                }, 1000);
+            } else {
+                alert("Vui lòng điền đầy đủ thông tin trước khi thanh toán.");
+            }
+        });
+    </script>
+
+
+</body>
+
+</html>

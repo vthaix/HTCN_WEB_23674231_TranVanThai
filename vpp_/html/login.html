@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Đăng Nhập</title>
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <script src="../js/jquery.js"></script>
+    <script src="../js/bootstrap.bundle.min.js"></script>
+    <style>
+        .others a {
+            text-decoration: none;
+            font-size: 15px;
+            color: red;
+        }
+        
+        .others a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+
+<body class="container col-6">
+    <div class="row">
+        <header class="bg-light w-100">
+            <div class="container d-flex justify-content-between align-items-center">
+                <!-- Logo bên trái -->
+                <div class="col-auto">
+                    <img src="../img/logo.jpeg" alt="Logo" style="height: 100px; width: 200px;">
+                </div>
+
+                <!-- Tiêu đề bên phải -->
+                <div class="col-auto">
+                    <h3 class="m-0" style="font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; font-weight: bold; border-bottom: 3px solid black; padding-bottom: 10px;">
+                        THANHXUAN
+                    </h3>
+                </div>
+            </div>
+        </header>
+    </div>
+
+
+    <div class="row">
+        <div class="d-flex justify-content-center align-items-center" style="height: 100vh; background-color: rgb(249, 91, 91);">
+            <div class="card shadow p-4 bg-white" style="width: 100%; max-width: 400px; border-radius: 15px;">
+                <h3 class="text-center mb-4">Đăng Nhập</h3>
+                <form id="loginForm">
+                    <div class="mb-3">
+                        <label for="email" class="form-label">Email:</label>
+                        <input type="email" class="form-control" id="email" placeholder="Nhập tài khoản" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="password" class="form-label">Mật khẩu:</label>
+                        <input type="password" class="form-control" id="password" placeholder="Nhập mật khẩu" required>
+                    </div>
+                    <div id="errorMessage" class="text-danger mb-3" style="display: none;"></div>
+                    <button type="submit" class="btn btn-primary w-100" style="background-color: rgb(254, 54, 54); color: rgb(255, 255, 255); border: 1px solid black;">Đăng
+                        nhập</button>
+                </form>
+                <div class="others my-2 d-flex justify-content-between">
+                    <a href="quenmatkhau.html">Quên mật khẩu</a>
+                    <a href="dangki.html">Đăng ký</a>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    </div>
+
+</body>
+<!-- JavaScript -->
+<script>
+    document.getElementById("loginForm").addEventListener("submit", function(event) {
+        event.preventDefault();
+        const email = document.getElementById("email").value;
+        const errorMessage = document.getElementById("errorMessage");
+
+        const pattern = /^[a-zA-Z]+[0-9]+@gmail\.com$/;
+
+
+        if (!pattern.test(email)) {
+            errorMessage.style.display = "block";
+            errorMessage.textContent = "Email sai định dạng";
+        } else {
+            errorMessage.style.display = "none";
+            window.location.href = 'index.html';
+        }
+    });
+</script>
+
+</html>

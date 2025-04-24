@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Văn Phòng Phẩm </title>
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/bootstrap-icons.css">
+    <script src="../js/jquery.js"></script>
+    <script src="../js/bootstrap.bundle.min.js"></script>
+    <style>
+        .chinhanh ul li {
+            list-style: none;
+        }
+        
+        .chinhanh ul li a {
+            text-decoration: none;
+            color: black;
+        }
+    </style>
+
+</head>
+<script>
+    $(document).ready(function() {
+        $('.map-link').click(function(e) {
+            e.preventDefault();
+            const newSrc = $(this).data('src');
+            $('#mapFrame').attr('src', newSrc);
+        });
+    });
+</script>
+
+<body class="bg-light">
+
+    <!-- Header -->
+    <header class="bg-white shadow-sm p-3">
+        <div class="container d-flex justify-content-between align-items-center">
+            <div class="d-flex align-items-center">
+                <img src="../img/logo.jpeg" alt="Logo" style="height: 100px; width: 200px;" class="me-3">
+                <h3 class="m-0" style="font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; font-weight: bold; border-bottom: 3px solid black; padding-bottom: 10px;">
+                    THANHXUAN</h3>
+            </div>
+            <div class="d-flex">
+                <input type="text" class="form-control me-2" style="height: 40px;" placeholder="Tìm kiếm sản phẩm...">
+                <button class="btn" style="border: 1px solid black ;height: 40px;">
+                    <a href="storeAddress.html">
+                        <i class="bi bi-geo-alt" style="color: red"></i>
+                    </a>
+                </button>
+                <button class="btn" style="border: 1px solid black; height: 40px; margin-left: 10px;">
+                    <a href="giohang.html">
+                        <i class="bi bi-cart giohang" style="color: red;"></i>
+                    </a>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-danger">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">Trang chủ</a>
+            <button class="navbar-toggler" type="button">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarContent">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="sach.html">Sách - Văn Học</a></li>
+                    <li class="nav-item"><a class="nav-link" href="hoacu.html">Hoạ Cụ - Màu Vẽ</a></li>
+                    <li class="nav-item"><a class="nav-link" href="qualuuniem.html">Bách Hoá - Lưu Niệm</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <section class="container my-5">
+        <div class="row" style="max-width: 1320px; display: flex;">
+            <h1 style="font-family: Arial, Helvetica, sans-serif; font-weight: bolder;">NHÀ SÁCH - VĂN PHÒNG PHẨM</h1>
+            <div class="part1 thongtincuahang" style="flex: 1;">
+                <p><strong>Hotline:</strong> 0399294843</p>
+                <p><strong>Website:</strong></p>
+                <p><strong>Email:</strong> thanhxuanBS@gmail.com</p>
+                <div class="mt-4">
+                    <h5 style="font-weight: bolder;">Địa chỉ các chi nhánh:</h5>
+                    <div class="chinhanh" style="max-height: 250px; max-width: 500px; overflow-y: auto; border: 1px solid #ccc; background-color: #f8f9fa; border-radius: 10px; border: 1px solid black">
+                        <ul class="mb-0">
+                            <li><a href="#" class="map-link" data-src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3918.5413895531647!2d106.7757287751126!3d10.846365589306735!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3175270c41402085%3A0x3f22295b89dfb90d!2zMTIzIEzDqiBWxINuIFZp4buHdCwgSGnhu4dwIFBow7osIFRo4bunIMSQ4bupYywgSOG7kyBDaMOtIE1pbmggNzAwMDAwLCBWaeG7h3QgTmFt!5e0!3m2!1svi!2s!4v1745477077450!5m2!1svi!2s"
+                                    width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"><strong>Chi nhánh 1:</strong> 123 Lê Văn Việt, Thủ Đức, TP.HCM</a></li>
+                            <li><a href="#" class="map-link" data-src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3919.7316258576047!2d106.66894897511145!3d10.75515478939231!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31752efc617f3451%3A0xb999749e4e64d577!2zNDU2IMSQLiBOZ3V54buFbiBUcsOjaSwgUGjGsOG7nW5nIDcsIFF14bqtbiA1LCBI4buTIENow60gTWluaCwgVmnhu4d0IE5hbQ!5e0!3m2!1svi!2s!4v1745477185889!5m2!1svi!2s"
+                                    width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"><strong>Chi nhánh 2:</strong> 456 Nguyễn Trãi, Quận 5, TP.HCM</a></li>
+                            <li><a href="#" class="map-link" data-src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3919.731621959152!2d106.6787763751113!3d10.755155089392296!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31752f0370c98627%3A0x10d64f7c03a40ce9!2zNzg5IFRy4bqnbiBIxrBuZyDEkOG6oW8sIFBoxrDhu51uZyAxLCBRdeG6rW4gNSwgSOG7kyBDaMOtIE1pbmgsIFZp4buHdCBOYW0!5e0!3m2!1svi!2s!4v1745477258091!5m2!1svi!2s"
+                                    width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"><strong>Chi nhánh 3:</strong> 789 Trần Hưng Đạo, Quận 1, TP.HCM</a></li>
+                            <li><a href="#" class="map-link" data-src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3919.731621959152!2d106.6787763751113!3d10.755155089392296!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31752eee4598cae9%3A0xc69d64566cf46453!2zMTAxIMSQLiBMw70gVGjGsOG7nW5nIEtp4buHdCwgUGjGsOG7nW5nIDcsIFF14bqtbiAxMCwgSOG7kyBDaMOtIE1pbmgsIFZp4buHdCBOYW0!5e0!3m2!1svi!2s!4v1745477309139!5m2!1svi!2s"
+                                    width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"><strong>Chi nhánh 4:</strong> 101 Lý Thường Kiệt, Quận Tân Bình, TP.HCM</a></li>
+                            <li><a href="#" class="map-link" data-src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3919.6029418099956!2d106.67927727511156!3d10.765052989383026!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31752f1ed203667d%3A0x94871732d773469!2zMjAyIMSQLiBOZ3V54buFbiBWxINuIEPhu6ssIFBoxrDhu51uZyBOZ3V54buFbiBDxrAgVHJpbmgsIFF14bqtbiAxLCBI4buTIENow60gTWluaCwgVmnhu4d0IE5hbQ!5e0!3m2!1svi!2s!4v1745477353956!5m2!1svi!2s"
+                                    width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"><strong>Chi nhánh 5:</strong> 202 Nguyễn Văn Cừ, Quận 10, TP.HCM</a></li>
+                            <li><a href="#" class="map-link" data-src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3980.3857825005884!2d106.67874507511206!3d10.7998919893503!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x317528d7464d30ad%3A0xa8deb9f1d236dc5f!2zMzAzIFBoYW4gxJDEg25nIEzGsHUsIFBoxrDhu51uZyAxLCBQaMO6IE5odeG6rW4sIEjhu5MgQ2jDrSBNaW5oLCBWaeG7h3QgTmFt!5e1!3m2!1svi!2s!4v1745477434253!5m2!1svi!2s"
+                                    width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"><strong>Chi nhánh 6:</strong> 303 Phan Đăng Lưu, Quận Bình Thạnh, TP.HCM</a></li>
+                            <li><a href="#" class="map-link" data-src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3980.66679256322!2d106.64308277511174!3d10.778666489370265!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31752eba348f82e7%3A0xb8ab6ed0fbbf161e!2zMTMgxJAuIMOCdSBDxqEsIFBoxrDhu51uZyAxMCwgVMOibiBCw6xuaCwgSOG7kyBDaMOtIE1pbmgsIFZp4buHdCBOYW0!5e1!3m2!1svi!2s!4v1745477749487!5m2!1svi!2s"
+                                    width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"><strong>Chi nhánh 7:</strong> 13 Âu Cơ, Quận Tân Bình, TP.HCM</a></li>
+                            <li><a href="#" class="map-link" data-src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3980.6631503296085!2d106.63056967976812!3d10.778941861961211!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31752ea42ce3f053%3A0xdc6f0949c9d50bc6!2zNDU2IMSQLiBMxal5IELDoW4gQsOtY2gsIEjDsmEgVGjhuqFuaCwgVMOibiBQaMO6LCBI4buTIENow60gTWluaCwgVmnhu4d0IE5hbQ!5e1!3m2!1svi!2s!4v1745478225325!5m2!1svi!2s"
+                                    width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"><strong>Chi nhánh 8:</strong> 456 Luỹ Bán Bích, Quận Tân Phú, TP.HCM</a></li>
+                            <li><a href="#" class="map-link" data-src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3980.6768006318307!2d106.70119437511168!3d10.77790978937098!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31752f4627057041%3A0x3be4ebdc7b8f7500!2zNzQvNiBIYWkgQsOgIFRyxrBuZywgQuG6v24gTmdow6ksIFF14bqtbiAxLCBI4buTIENow60gTWluaCA3MDAwMDAsIFZp4buHdCBOYW0!5e1!3m2!1svi!2s!4v1745478277582!5m2!1svi!2s"
+                                    width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"><strong>Chi nhánh 9:</strong> 74/6 Hai Bà Trưng, Quận 1, TP.HCM</a></li>
+                            <li><a href="#" class="map-link" data-src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3980.76384466947!2d106.65318847976737!3d10.771326261986715!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31752ee9f4518e5b%3A0x73f798f2a7cc40cd!2zMzAwIMSQLiBMw70gVGjGsOG7nW5nIEtp4buHdCwgUGjGsOG7nW5nIDE0LCBRdeG6rW4gMTAsIEjhu5MgQ2jDrSBNaW5oLCBWaeG7h3QgTmFt!5e1!3m2!1svi!2s!4v1745477629958!5m2!1svi!2s"
+                                    width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"><strong>Chi nhánh 10:</strong> 300 Lý Thường Kiệt, Quận 10, TP.HCM</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="part2 bando" style="flex: 1;">
+                <iframe id="mapFrame" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3918.5413895531647!2d106.7757287751126!3d10.846365589306735!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3175270c41402085%3A0x3f22295b89dfb90d!2zMTIzIEzDqiBWxINuIFZp4buHdCwgSGnhu4dwIFBow7osIFRo4bunIMSQ4bupYywgSOG7kyBDaMOtIE1pbmggNzAwMDAwLCBWaeG7h3QgTmFt!5e0!3m2!1svi!2s!4v1745477077450!5m2!1svi!2s"
+                    width="700px" height="450" style="border-radius: 10px;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+                </iframe>
+            </div>
+        </div>
+    </section>
+
+
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white text-center py-4">
+        <p class="mb-0">Địa chỉ: 123 Lê Văn Việt, Thủ Đức, TP.HCM</p>
+        <p class="mb-0">© 2025 Văn Phòng Phẩm ABC</p>
+    </footer>
+
+</body>
+
+</html>
