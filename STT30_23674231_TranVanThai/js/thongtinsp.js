@@ -158,23 +158,88 @@ const hoacu = [{
     }
 ];
 
-const qua = [{
-    id: 1,
-    name: "Scrunchie Vải Nhung - WanLongDa 3189 - Màu Nâu",
-    brand: "WanLongDa",
-    region: "Trung Quốc",
-    soluong: 1,
-    publisher: "Cty Văn Hoá Việt Văn",
-    price: 33000,
-    mota: "Sản phẩm là món trang sức phụ kiện đi kèm không thể thiếu giúp tôn lên vẻ đẹp cũng như giúp các bạn gái thêm nổi bật ấn tượng.",
-    vanchuyen: "Phường Bến Nghé, Q1, Hồ Chí Minh",
-    imageUrl: "../img/scrunchie.webp",
-    link: "chitiet_sp.html"
-}]
+const vanphongpham = [{
+        id: 1,
+        name: "Thùng Giấy Photo A4 IK Copy 70gsm (5 Ream x 500 Tờ)",
+        brand: "IK",
+        region: "Indonesia",
+        soluong: 1,
+        publisher: "Thiên Long Hoàn Cầu",
+        price: 349250,
+        mota: "IK Copy là sự lựa chọn thích hợp cho mọi nhu cầu sử dụng. Thiết kế vượt trội chạy trên máy photocopy tốc độ cao, số lượng nhiều. Công nghệ Fast Copying ứng dụng trong IK Copy đã được kiểm chứng và tin dùng bởi chất lượng vận hành đồng bộ, không kẹt giấy.",
+        vanchuyen: "Phường Bến Nghé, Q1, Hồ Chí Minh",
+        imageUrl: "../img/thunggiay.webp",
+        link: "chitiet_sp.html"
+    },
+    {
+        id: 2,
+        name: "Giấy Photo Double A",
+        brand: "Double A",
+        region: "Thái Lan",
+        soluong: 1,
+        publisher: "Vĩnh Thịnh",
+        price: 109250,
+        mota: "Giấy photo Double A A4/80 gsm với kích thước A4, thân thiện với môi trường và thích hợp với hầu hết các loại máy in phun, máy in laser, máy fax laser, máy photocopy.",
+        vanchuyen: "Phường Bến Nghé, Q1, Hồ Chí Minh",
+        imageUrl: "../img/hopgiayDA.webp",
+        link: "chitiet_sp.html"
+    },
+    {
+        id: 3,
+        name: "Giấy Photo IK-Natural A4/70",
+        brand: "Natural",
+        region: "Indonesia",
+        soluong: 500,
+        publisher: "Cty TNHH TMDV SX Giấy Khải Hoàng",
+        price: 78000,
+        mota: "Giấy Natural, định lượng 70A4 là loại giấy trắng đẹp, độ sắc nét cao, in 2 mặt không bị kẹt giấy, cho phép in, photocopy ra những văn bản, hình ảnh đẹp.",
+        vanchuyen: "Phường Bến Nghé, Q1, Hồ Chí Minh",
+        imageUrl: "../img/giayinnatural.webp",
+        link: "chitiet_sp.html"
+    },
+    {
+        id: 4,
+        name: "Giấy Photo Copy A4 140gsm",
+        brand: "Fahasa",
+        region: "Việt Nam",
+        soluong: 20,
+        publisher: "FAHASA Print",
+        price: 78000,
+        mota: "Giấy Photo Copy A4 140gsm (20 Tờ) với kích thước A4, thân thiện với môi trường và thích hợp với hầu hết các loại máy in phun, máy in laser, máy fax laser, máy photocopy.",
+        vanchuyen: "Phường Bến Nghé, Q1, Hồ Chí Minh",
+        imageUrl: "../img/giayphoto.webp",
+        link: "chitiet_sp.html"
+    }
+]
+const butghi = [{
+        id: 1,
+        name: "Bút Máy Nét Trơn Lucky 0.5 mm - Hồng Hà 2289",
+        brand: "Hồng Hà",
+        region: "Việt Nam",
+        loai: "Bút mực xanh",
+        publisher: "Cty VPP Hồng Hà",
+        price: 36000,
+        mota: "Bút Máy Nét Trơn Lucky 0.5 mm - Hồng Hà 2289 - kết cấu nhỏ gọn, màu sắc tươi sáng, đa dạng lựa chọn.",
+        vanchuyen: "Phường Bến Nghé, Q1, Hồ Chí Minh",
+        imageUrl: "../img/buthongha.webp",
+        link: "chitiet_sp.html"
+    },
+    {
+        id: 2,
+        name: "Bút Máy Kim Loại - Thiên Long TP-FTC02 - Màu Xanh Dương",
+        brand: "Thiên Long",
+        region: "Việt Nam",
+        loai: "Bút máy mực xanh",
+        publisher: "Thiên Long Hoàn Cầu",
+        price: 85000,
+        mota: "Vừa là Bút máy chuyên dùng ống mực, vừa là bút máy bơm mực.",
+        vanchuyen: "Phường Bến Nghé, Q1, Hồ Chí Minh",
+        imageUrl: "../img/butmaymucxanh.webp",
+        link: "chitiet_sp.html"
+    }
+]
 
 window.sach = sach;
 window.hoacu = hoacu;
-window.qua = qua;
-
-
-
+window.vanphongpham = vanphongpham;
+window.butghi = butghi;

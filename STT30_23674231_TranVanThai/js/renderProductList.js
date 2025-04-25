@@ -28,5 +28,6 @@ document.addEventListener("DOMContentLoaded", function() {
 
     renderProductList(window.sach, "book-list", "sach");
     renderProductList(window.hoacu, "art-supply-list", "hoacu");
-    renderProductList(window.qua, "souvenir-list", "qua");
+    renderProductList(window.vanphongpham, "papper-list", "vanphongpham");
+    renderProductList(window.butghi, "pen-list", "butghi");
 });
