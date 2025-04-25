@@ -41,28 +41,35 @@
 <body class="bg-light">
 
     <!-- Header -->
-    <header class="bg-white shadow-sm p-3">
-        <div class="container d-flex justify-content-between align-items-center">
-            <div class="d-flex align-items-center">
-                <img src="../img/logo.jpeg" alt="Logo" style="height: 100px; width: 200px;" class="me-3">
-                <h3 class="m-0" style="font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; font-weight: bold; border-bottom: 3px solid black; padding-bottom: 10px;">
-                    THANHXUAN</h3>
+    <div class="row">
+        <header class="bg-white shadow-sm">
+            <div class="container d-flex justify-content-between align-items-center">
+                <div class="d-flex align-items-center">
+                    <img src="../img/logo.jpeg" alt="Logo" style="height: 100px; width: 200px;" class="me-3">
+                    <h3 class="m-0" style="font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; font-weight: bold; border-bottom: 3px solid black; padding-bottom: 10px;">
+                        THANHXUAN</h3>
+                </div>
+                <div class="d-flex">
+                    <input type="text" class="form-control me-2" style="height: 40px;" placeholder="Tìm kiếm sản phẩm...">
+                    <button class="btn" style="border: 1px solid black; height: 40px;">
+                        <a href="thongtincanhan.html">
+                            <i class="bi bi-person-circle icon" style="color: red"></i>
+                        </a>
+                    </button>
+                    <button class="btn" style="border: 1px solid black; height: 40px; margin-left: 10px;">
+                        <a href="storeAddress.html">
+                            <i class="bi bi-geo-alt" style="color: red"></i>
+                        </a>
+                    </button>
+                    <button class="btn" style="border: 1px solid black; height: 40px; margin-left: 10px;">
+                        <a href="giohang.html">
+                            <i class="bi bi-cart giohang" style="color: red;"></i>
+                        </a>
+                    </button>
+                </div>
             </div>
-            <div class="d-flex">
-                <input type="text" class="form-control me-2" style="height: 40px;" placeholder="Tìm kiếm sản phẩm...">
-                <button class="btn" style="border: 1px solid black ;height: 40px;">
-                    <a href="storeAddress.html">
-                        <i class="bi bi-geo-alt" style="color: red"></i>
-                    </a>
-                </button>
-                <button class="btn" style="border: 1px solid black; height: 40px; margin-left: 10px;">
-                    <a href="giohang.html">
-                        <i class="bi bi-cart giohang" style="color: red;"></i>
-                    </a>
-                </button>
-            </div>
-        </div>
-    </header>
+        </header>
+    </div>
 
     <!-- Navbar -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-danger">
@@ -93,6 +100,8 @@
         <h4 class="mb-4 pb-3" style="border-bottom: 2px solid black;">Văn Phòng Phẩm - Dụng Cụ Học Tập</h4>
         <div class="row" id="papper-list" data-type="vanphongpham"></div>
         <div class="row" id="pen-list" data-type="vanphongpham"></div>
+        <button onclick="window.location.href = 'index.html'" class="btn btn-primary my-2" style="background-color: rgb(0, 0, 0); color: rgb(255, 255, 255); border: none; width: 20%;">
+            Quay lại</button>
     </section>
 
     <script src="../js/thongtinsp.js"></script>

@@ -4,38 +4,31 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Văn Phòng Phẩm </title>
+    <title>Thông Tin Cá Nhân</title>
     <link rel="stylesheet" href="../css/lib/bootstrap.min.css">
     <link rel="stylesheet" href="../css/lib/bootstrap-icons.css">
     <script src="../js/lib/jquery.js"></script>
     <script src="../js/lib/bootstrap.bundle.min.js"></script>
     <style>
-        .product-card {
-            border: 1px solid #ddd;
-            border-radius: 10px;
-            padding: 15px;
-            margin-bottom: 20px;
+        .info-card {
             background-color: #fff;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
         }
         
-        .product-card:hover {
-            transform: scale(1.03);
-            transition: all 0.3s ease-in-out;
+        .info-card h4 {
+            margin-bottom: 20px;
         }
         
-        .btn-them {
-            border-radius: 7px;
-            background-color: white;
-            color: rgb(255, 54, 54);
-            border: 1px solid rgb(255, 54, 54);
-            padding: 5px;
-            margin-left: auto;
+        .info-item {
+            margin-bottom: 15px;
+        }
+        
+        .info-item span {
+            font-weight: bold;
         }
     </style>
-
-
-
 </head>
 
 <body class="bg-light p-lg-5">
@@ -71,42 +64,38 @@
         </header>
     </div>
 
-    <!-- Navbar -->
-    <div class="row">
-        <nav class="navbar navbar-expand-lg navbar-dark bg-danger">
-            <div class="container">
-                <a class="navbar-brand" href="index.html">Trang chủ</a>
-                <button class="navbar-toggler" type="button">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarContent">
-                    <ul class="navbar-nav ms-auto">
-                        <li class="nav-item"><a class="nav-link" href="sach.html">Sách - Văn Học</a></li>
-                        <li class="nav-item"><a class="nav-link" href="hoacu.html">Hoạ Cụ - Màu Vẽ</a></li>
-                        <li class="nav-item"><a class="nav-link" href="vpp.html">Văn Phòng Phẩm - Dụng Cụ Học Tập</a></li>
-                    </ul>
+    <!-- Nội dung chính -->
+    <div class="container my-5">
+        <div class="row justify-content-center">
+            <div class="col-md-6 info-card">
+                <h4>Thông Tin Cá Nhân</h4>
+                <div class="info-item">
+                    <span>Họ và tên:</span> Nguyễn Văn A
                 </div>
-            </div>
-        </nav>
-    </div>
+                <div class="info-item">
+                    <span>Số điện thoại:</span> 0901234567
+                </div>
+                <div class="info-item">
+                    <span>Email:</span> nguyenvana0412@example.com
+                </div>
+                <div class="info-item">
+                    <span>Địa chỉ:</span> 123 Lê Văn Việt, Thủ Đức, TP.HCM
+                </div>
+                <div class="info-item">
+                    <span>Tổng đơn hàng đã mua:</span> 0
+                </div>
+                <div class="info-item">
+                    <span>Người dùng từ:</span> 04/12/2020
+                </div>
+                <div class="quaylai&dangxuat" style="display: flex;">
+                    <button onclick="window.location.href = 'index.html'" class="btn btn-primary w-100 my-2" style="background-color: rgb(0, 0, 0); color: rgb(255, 255, 255); border: none;">
+                        Quay lại</button>
+                    <button onclick="window.location.href = 'login.html'" class="btn btn-primary w-100 my-2 mx-2" style="background-color: rgb(7, 7, 7); color: rgb(255, 255, 255); border: none;">
+                        Đăng xuất</button>
+                </div>
 
-    <!-- Banner -->
-    <div class="row">
-        <section class="my-4">
-            <div class="container">
-                <img src="../img/banner.webp" alt="Banner quảng cáo" class="img-fluid rounded w-100">
             </div>
-        </section>
-    </div>
-
-    <!-- Danh sách sản phẩm -->
-    <div class="row">
-        <section class="container my-5">
-            <h4 class="mb-4 pb-3" style="border-bottom: 2px solid black;">Hoạ cụ</h4>
-            <div class="row" id="art-supply-list" data-type="hoacu"></div>
-            <button onclick="window.location.href = 'index.html'" class="btn btn-primary my-2" style="background-color: rgb(0, 0, 0); color: rgb(255, 255, 255); border: none; width: 20%;">
-                Quay lại</button>
-        </section>
+        </div>
     </div>
 
     <!-- Footer -->
@@ -117,12 +106,6 @@
         </footer>
     </div>
 
-    <!-- Scripts -->
-    <script src="../js/thongtinsp.js"></script>
-    <script src="../js/renderProductList.js"></script>
-    <script src="../js/themgiohang.js"></script>
-
 </body>
-
 
 </html>
