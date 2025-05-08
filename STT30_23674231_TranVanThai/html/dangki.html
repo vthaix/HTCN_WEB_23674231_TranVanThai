@@ -93,7 +93,7 @@
             const phonePattern = /^0\d{9}$/;
 
             if (!emailPattern.test(email)) {
-                errorMessage.textContent = "Email sai định dạng";
+                errorMessage.textContent = "Email sai định dạng VD: vanthai03@gmail.com";
                 errorMessage.style.display = "block";
             } else if (!phonePattern.test(phone)) {
                 errorMessage.textContent = "Số điện thoại phải có 10 chữ số và bắt đầu bằng 0";
