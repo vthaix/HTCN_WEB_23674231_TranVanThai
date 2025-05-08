@@ -2,7 +2,7 @@ document.addEventListener("DOMContentLoaded", function() {
             const renderProductList = (products, containerId, type) => {
                     const productListContainer = document.getElementById(containerId);
                     if (!productListContainer) return;
-
+                    // Duyệt qua từng sản phẩm trong mảng
                     products.forEach(product => {
                                 const productHtml = `
                 <div class="col-md-3">
@@ -22,6 +22,7 @@ document.addEventListener("DOMContentLoaded", function() {
                     </div>
                 </div>
             `;
+            // Thêm HTML của sản phẩm
             productListContainer.innerHTML += productHtml;
         });
     };
