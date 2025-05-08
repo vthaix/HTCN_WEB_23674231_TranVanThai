@@ -36,74 +36,11 @@
 </head>
 
 <body class="bg-light">
-
-    <!-- Header -->
-    <div class="row">
-        <header class="bg-white shadow-sm">
-            <div class="container d-flex justify-content-between align-items-center flex-wrap">
-                <div class="d-flex align-items-center flex-wrap" style="flex: 1 1 0%;">
-                    <img src="../img/logo.jpeg" alt="Logo" style="max-height: 100px; max-width: 300px; height: auto; width: auto;" class="me-2">
-                    <h3 class="m-0 text-wrap" style="font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-                               font-weight: bold; border-bottom: 3px solid black; padding-bottom: 10px;
-                               ">
-                        THANHXUAN
-                    </h3>
-                </div>
-
-                <div class="d-none d-md-flex">
-                    <div class="search position-relative">
-                        <div class="displaySuggest position-relative">
-                            <input type="text" class="form-control me-2" id="searchBox" style="height: 40px;" placeholder="Tìm kiếm sản phẩm...">
-                            <div class="suggest bg-danger row position-absolute z-1" id="suggestions" style="max-width: 500px; max-height: 300px; height: auto; width: auto; overflow-y: scroll; display: block; z-index: 1000;">
-                                <!-- suggestion -->
-                            </div>
-                        </div>
-
-                    </div>
-
-                    <button class="btn" style="border: 1px solid black; height: 40px;">
-                        <a href="thongtincanhan.html">
-                            <i class="bi bi-person-circle icon" style="color: red"></i>
-                        </a>
-                    </button>
-                    <button class="btn" style="border: 1px solid black; height: 40px; margin-left: 10px;">
-                        <a href="storeAddress.html">
-                            <i class="bi bi-geo-alt" style="color: red"></i>
-                        </a>
-                    </button>
-                    <button class="btn" style="border: 1px solid black; height: 40px; margin-left: 10px;">
-                        <a href="giohang.html">
-                            <i class="bi bi-cart giohang" style="color: red;"></i>
-                        </a>
-                    </button>
-                </div>
-            </div>
-        </header>
-    </div>
-
-    <!-- Navbar -->
-    <div class="row">
-        <nav class="navbar navbar-expand-lg navbar-dark bg-danger">
-            <div class="container">
-                <a class="navbar-brand" href="index.html">Trang chủ</a>
-                <button class="navbar-toggler" type="button">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarContent">
-                    <ul class="navbar-nav ms-auto">
-                        <li class="nav-item"><a class="nav-link" href="sach.html">Sách - Văn Học</a></li>
-                        <li class="nav-item"><a class="nav-link" href="hoacu.html">Hoạ Cụ - Màu Vẽ</a></li>
-                        <li class="nav-item"><a class="nav-link" href="vpp.html">Văn Phòng Phẩm - Dụng Cụ Học Tập</a></li>
-                    </ul>
-                </div>
-            </div>
-        </nav>
-    </div>
-
+    <!-- Form Thông Tin Người Mua -->
     <div class="container">
         <div class="form-section">
             <div class="form-title text-danger">Thông Tin Người Mua</div>
-            <form>
+            <form id="formThanhToan">
                 <div class="row mb-3">
                     <div class="col-md-6">
                         <label for="hoTen" class="form-label">Họ và Tên</label>
@@ -120,44 +57,77 @@
                     <input type="text" class="form-control" id="diaChi" placeholder="123 Lê Văn Việt, Thủ Đức" required>
                 </div>
 
-                <div class="form-title text-danger mt-4">Thông Tin Ngân Hàng</div>
-                <div class="row mb-3">
-                    <div class="col-md-6">
-                        <label for="tenNH" class="form-label">Tên Ngân Hàng</label>
-                        <input type="text" class="form-control" id="tenNH" placeholder="Vietcombank, Agribank..." required>
-                    </div>
-                    <div class="col-md-6">
-                        <label for="soTK" class="form-label">Số Tài Khoản</label>
-                        <input type="text" class="form-control" id="soTK" placeholder="1234567890" required>
-                    </div>
+                <div class="form-title text-danger mt-4">Thông Tin Sản Phẩm</div>
+                <div id="gioHangHienThi" class="row">
+                    <!-- Sản phẩm sẽ được render tại đây -->
                 </div>
-                <div class="thanhtoan&quaylai" style="display: flex;">
-                    <button onclick="window.location.href = 'index.html'" class="btn btn-primary mt-3 mx-2" style="background-color: rgb(0, 0, 0); color: rgb(255, 255, 255); border: none; width: 40%;">
-                        Quay lại</button>
-                    <button type="submit" class="btn btn-danger mt-3">Xác Nhận Thanh Toán</button>
+
+                <div class="text-end mt-3">
+                    <h5 class="text-danger">Tổng tiền: <span id="tongTien">0</span>đ</h5>
+                </div>
+
+                <div class="thanhtoan&quaylai mt-4" style="display: flex;">
+                    <button onclick="window.location.href = 'index.html'" class="btn btn-secondary mx-2">
+                        Quay lại
+                    </button>
+                    <button type="submit" class="btn btn-danger">Xác Nhận Thanh Toán</button>
                 </div>
             </form>
         </div>
     </div>
 
-    <!-- Footer -->
-    <footer class="bg-dark text-white text-center py-4 mt-5">
-        <p class="mb-0">Địa chỉ: 123 Lê Văn Việt, Thủ Đức, TP.HCM</p>
-        <p class="mb-0">© 2025 Văn Phòng Phẩm ABC</p>
-    </footer>
-
     <script>
-        document.querySelector("form").addEventListener("submit", function(e) {
+        // Lấy thông tin giỏ hàng từ LocalStorage
+        const gioHang = JSON.parse(localStorage.getItem("gioHang")) || [];
+        const gioHangHienThi = document.getElementById("gioHangHienThi");
+        const tongTienElement = document.getElementById("tongTien");
+
+        // Kiểm tra nếu giỏ hàng trống
+        if (gioHang.length === 0) {
+            gioHangHienThi.innerHTML = "<p>Giỏ hàng của bạn đang trống.</p>";
+        } else {
+            let tongTien = 0;
+
+            // Hiển thị từng sản phẩm
+            gioHang.forEach(sp => {
+                tongTien += sp.gia * sp.soLuong;
+
+                const productCard = document.createElement("div");
+                productCard.className = "col-md-4 mb-3";
+
+                productCard.innerHTML = `
+                    <div class="card h-100">
+                        <img src="${sp.hinhAnh}" class="card-img-top" alt="${sp.tieuDe}" style="height: 200px; object-fit: cover;">
+                        <div class="card-body">
+                            <h5 class="card-title">${sp.tieuDe}</h5>
+                            <p class="card-text text-danger">Giá: ${sp.gia.toLocaleString()}đ</p>
+                            <p class="card-text">Số lượng: ${sp.soLuong}</p>
+                            <p class="card-text text-success fw-bold">Thành tiền: ${(sp.gia * sp.soLuong).toLocaleString()}đ</p>
+                        </div>
+                    </div>
+                `;
+
+                gioHangHienThi.appendChild(productCard);
+            });
+
+            // Cập nhật tổng tiền
+            tongTienElement.textContent = tongTien.toLocaleString();
+        }
+
+        // Xử lý thanh toán
+        document.getElementById("formThanhToan").addEventListener("submit", function(e) {
             e.preventDefault();
 
             const hoTen = document.getElementById("hoTen").value.trim();
             const sdt = document.getElementById("sdt").value.trim();
             const diaChi = document.getElementById("diaChi").value.trim();
-            const tenNH = document.getElementById("tenNH").value.trim();
-            const soTK = document.getElementById("soTK").value.trim();
 
-            if (hoTen && sdt && diaChi && tenNH && soTK) {
+            if (hoTen && sdt && diaChi) {
                 alert("Thanh toán thành công! Cảm ơn bạn đã mua hàng.");
+
+                // Xóa giỏ hàng sau khi thanh toán thành công
+                localStorage.removeItem("gioHang");
+
                 setTimeout(() => {
                     window.location.href = "index.html";
                 }, 1000);
@@ -166,10 +136,6 @@
             }
         });
     </script>
-
-
 </body>
-<script src="../js/thongtinsp.js"></script>
-<script src="../js/searchProducts.js"></script>
 
 </html>
