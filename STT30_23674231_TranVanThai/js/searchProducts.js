@@ -1,5 +1,4 @@
 document.addEventListener("DOMContentLoaded", function() {
-    // Mảng sản phẩm tổng hợp từ các danh mục
     const allProducts = [
         ...window.sach.map(product => ({...product, type: 'sach' })),
         ...window.hoacu.map(product => ({...product, type: 'hoacu' })),
@@ -23,7 +22,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
         filteredProducts.forEach(product => {
             const li = document.createElement('li');
-            li.className = 'list-group-item d-flex align-items-center'; // d-flex để xếp hình + chữ cùng hàng
+            li.className = 'list-group-item d-flex align-items-center';
 
             const img = document.createElement('img');
             img.src = product.imageUrl;
@@ -32,13 +31,13 @@ document.addEventListener("DOMContentLoaded", function() {
             img.style.height = '50px';
             img.style.objectFit = 'cover';
             img.style.marginRight = '10px';
-            img.style.borderRadius = '8px'; // nếu bạn muốn bo nhẹ góc ảnh
+            img.style.borderRadius = '8px';
 
             const span = document.createElement('span');
             span.textContent = product.name;
 
-            li.appendChild(img); // Thêm ảnh vào li
-            li.appendChild(span); // Thêm text vào li
+            li.appendChild(img);
+            li.appendChild(span);
 
             li.addEventListener('click', function() {
                 window.location.href = `chitiet_sp.html?type=${product.type}&id=${product.id}`;
